@@ -45,6 +45,7 @@
                     <th>Code</th>
                     <th>Course Name</th>
                     <th>Category</th>
+                    <th>Department</th>
                     <th>Description</th>
                     <th>Created Date</th>
                     @auth
@@ -59,6 +60,7 @@
                         <td>{{ $course->course_code }}</td>
                         <td>{{ $course->course_name }}</td>
                         <td>{{ $course->category?->category_name ?? '-' }}</td>
+                        <td>{{ $course->department?->department_name ?? '-' }}</td>
                         <td>{{ $course->description ?? '-' }}</td>
                         <td>{{ $course->created_at?->format('Y-m-d') }}</td>
                         @auth

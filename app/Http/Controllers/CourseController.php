@@ -15,6 +15,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
 
+use App\Models\Department;
+
 class CourseController extends Controller
 {
     public function __construct(private readonly CourseService $courseService)
@@ -65,8 +67,9 @@ class CourseController extends Controller
     {
         $courseCode = $this->courseService->generateCode();
         $courseCategories = CourseCategory::orderBy('category_name')->get();
+        $departments = Department::orderBy('department_name')->get();
 
-        return view('courses.create', compact('courseCode', 'courseCategories'));
+        return view('courses.create', compact('courseCode', 'courseCategories', 'departments'));
     }
 
     public function store(StoreCourseRequest $request): RedirectResponse
@@ -81,8 +84,9 @@ class CourseController extends Controller
     public function edit(Course $course): View
     {
         $courseCategories = CourseCategory::orderBy('category_name')->get();
+        $departments = Department::orderBy('department_name')->get();
 
-        return view('courses.edit', compact('course', 'courseCategories'));
+        return view('courses.edit', compact('course', 'courseCategories', 'departments'));
     }
 
     public function update(UpdateCourseRequest $request, Course $course): RedirectResponse

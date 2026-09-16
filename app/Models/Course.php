@@ -13,6 +13,7 @@ class Course extends Model
 
     protected $fillable = [
         'course_category_id',
+        'department_id',
         'course_code',
         'course_name',
         'description',
@@ -22,6 +23,11 @@ class Course extends Model
     public function category(): BelongsTo
     {
         return $this->belongsTo(CourseCategory::class, 'course_category_id', 'course_category_id');
+    }
+
+    public function department(): BelongsTo
+    {
+        return $this->belongsTo(Department::class, 'department_id', 'department_id');
     }
 
     public function teachers(): BelongsToMany
