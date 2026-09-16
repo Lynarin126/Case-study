@@ -1,4 +1,4 @@
-﻿@extends('layouts.master')
+@extends('layouts.master')
 
 @section('title', 'Courses | LMS')
 
@@ -112,7 +112,7 @@
                             <option value="">-- Select teacher --</option>
                             @foreach($teachers as $teacher)
                                 <option value="{{ $teacher->teacher_id }}">
-                                    {{ $teacher->first_name }} {{ $teacher->last_name }}
+                                    {{ $teacher->full_name }}
                                 </option>
                             @endforeach
                         </select>
@@ -147,7 +147,7 @@
                             <option value="">-- Select student --</option>
                             @foreach($students as $student)
                                 <option value="{{ $student->student_id }}">
-                                    {{ $student->first_name }} {{ $student->last_name }} ({{ $student->student_code }})
+                                    {{ $student->full_name }} ({{ $student->student_code }})
                                 </option>
                             @endforeach
                         </select>

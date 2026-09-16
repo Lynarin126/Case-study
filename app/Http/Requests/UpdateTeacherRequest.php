@@ -12,6 +12,8 @@ class UpdateTeacherRequest extends FormRequest
         return [
             'first_name' => 'required|string|max:100',
             'last_name' => 'nullable|string|max:100',
+            'first_name_latin' => 'required|string|max:100',
+            'last_name_latin' => 'nullable|string|max:100',
             'gender' => 'nullable|string|max:20',
             'phone' => 'nullable|string|max:30',
             'email' => 'nullable|email|max:150|unique:teachers,email,' . $this->route('teacher')->teacher_id . ',teacher_id',

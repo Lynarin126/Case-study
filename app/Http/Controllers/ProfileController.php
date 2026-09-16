@@ -20,12 +20,22 @@ class ProfileController extends Controller
         $user = Auth::user();
 
         $validated = $request->validate([
-            'name' => ['required', 'string', 'max:255'],
+            'first_name' => ['required', 'string', 'max:100'],
+            'last_name' => ['nullable', 'string', 'max:100'],
+            'first_name_latin' => ['required', 'string', 'max:100'],
+            'last_name_latin' => ['nullable', 'string', 'max:100'],
             'email' => ['required', 'string', 'email', 'max:255', Rule::unique('users')->ignore($user->id)],
             'password' => ['nullable', 'string', 'min:8', 'confirmed'],
         ]);
 
-        $user->name = $validated['name'];
+        $khmerName = trim(($validated['first_name'] ?? '') . ' ' . ($validated['last_name'] ?? ''));
+        $latinName = trim(($validated['first_name_latin'] ?? '') . ' ' . ($validated['last_name_latin'] ?? ''));
+
+        $user->first_name = $validated['first_name'];
+        $user->last_name = $validated['last_name'] ?? null;
+        $user->first_name_latin = $validated['first_name_latin'];
+        $user->last_name_latin = $validated['last_name_latin'] ?? null;
+        $user->name = $khmerName ?: $latinName;
         $user->email = $validated['email'];
 
         if (!empty($validated['password'])) {

@@ -42,7 +42,8 @@
             <thead>
                 <tr>
                     <th>ល.រ</th>
-                    <th>ឈ្មោះ</th>
+                    <th>ឈ្មោះខ្មែរ (Khmer Name)</th>
+                    <th>ឈ្មោះឡាតាំង (Latin Name)</th>
                     <th>អ៊ីមែល</th>
                     <th>ថ្ងៃបង្កើត</th>
                     <th>សកម្មភាព</th>
@@ -52,7 +53,8 @@
                 @foreach ($users as $user)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
-                        <td>{{ $user->name }}</td>
+                        <td class="font-weight-bold text-dark">{{ $user->khmer_name ?: '-' }}</td>
+                        <td class="text-primary">{{ $user->latin_name ?: '-' }}</td>
                         <td>{{ $user->email }}</td>
                         <td>{{ $user->created_at?->format('Y-m-d') }}</td>
                         <td>

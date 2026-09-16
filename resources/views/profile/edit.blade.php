@@ -65,10 +65,40 @@
                     @method('PUT')
                     
                     <div class="form-group row">
-                        <label for="name" class="col-sm-3 col-form-label">ឈ្មោះពេញ <span class="text-danger">*</span></label>
+                        <label for="first_name" class="col-sm-3 col-form-label">នាមខ្លួនខ្មែរ (First Name) <span class="text-danger">*</span></label>
                         <div class="col-sm-9">
-                            <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{ old('name', $user->name) }}" required>
-                            @error('name')
+                            <input type="text" class="form-control @error('first_name') is-invalid @enderror" id="first_name" name="first_name" value="{{ old('first_name', $user->first_name) }}" required>
+                            @error('first_name')
+                                <span class="invalid-feedback">{{ $message }}</span>
+                            @enderror
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="last_name" class="col-sm-3 col-form-label">នាមត្រកូលខ្មែរ (Last Name)</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control @error('last_name') is-invalid @enderror" id="last_name" name="last_name" value="{{ old('last_name', $user->last_name) }}">
+                            @error('last_name')
+                                <span class="invalid-feedback">{{ $message }}</span>
+                            @enderror
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="first_name_latin" class="col-sm-3 col-form-label">First Name (Latin) <span class="text-danger">*</span></label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control @error('first_name_latin') is-invalid @enderror" id="first_name_latin" name="first_name_latin" value="{{ old('first_name_latin', $user->first_name_latin) }}" required>
+                            @error('first_name_latin')
+                                <span class="invalid-feedback">{{ $message }}</span>
+                            @enderror
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="last_name_latin" class="col-sm-3 col-form-label">Last Name (Latin)</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control @error('last_name_latin') is-invalid @enderror" id="last_name_latin" name="last_name_latin" value="{{ old('last_name_latin', $user->last_name_latin) }}">
+                            @error('last_name_latin')
                                 <span class="invalid-feedback">{{ $message }}</span>
                             @enderror
                         </div>

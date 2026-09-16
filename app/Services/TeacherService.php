@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Collection;
 
 class TeacherService
 {
-    public function getAll(): Collection
+    public function getAll(?string $search = null): Collection
     {
-        return Teacher::latest('teacher_id')->get();
+        return Teacher::search($search)->latest('teacher_id')->get();
     }
 
     public function create(array $data): Teacher
@@ -18,6 +18,8 @@ class TeacherService
             'teacher_code' => $this->generateCode(),
             'first_name' => $data['first_name'],
             'last_name' => $data['last_name'] ?? null,
+            'first_name_latin' => $data['first_name_latin'] ?? null,
+            'last_name_latin' => $data['last_name_latin'] ?? null,
             'gender' => $data['gender'] ?? null,
             'phone' => $data['phone'] ?? null,
             'email' => $data['email'] ?? null,
@@ -33,6 +35,8 @@ class TeacherService
         return $teacher->update([
             'first_name' => $data['first_name'],
             'last_name' => $data['last_name'] ?? null,
+            'first_name_latin' => $data['first_name_latin'] ?? null,
+            'last_name_latin' => $data['last_name_latin'] ?? null,
             'gender' => $data['gender'] ?? null,
             'phone' => $data['phone'] ?? null,
             'email' => $data['email'] ?? null,
