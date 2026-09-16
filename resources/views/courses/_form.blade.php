@@ -24,19 +24,36 @@
     @enderror
 </div>
 
-<div class="form-group">
-    <label for="course_category_id">ប្រភេទវគ្គសិក្សា</label>
-    <select name="course_category_id" id="course_category_id" class="form-control select2bs4 @error('course_category_id') is-invalid @enderror" required>
-        <option value="">ជ្រើសរើសប្រភេទវគ្គសិក្សា</option>
-        @foreach ($courseCategories as $category)
-            <option value="{{ $category->course_category_id }}" @selected((string) old('course_category_id', $course->course_category_id ?? '') === (string) $category->course_category_id)>
-                {{ $category->category_name }}
-            </option>
-        @endforeach
-    </select>
-    @error('course_category_id')
-        <span class="invalid-feedback d-block">{{ $message }}</span>
-    @enderror
+<div class="row">
+    <div class="col-md-6 form-group">
+        <label for="course_category_id">ប្រភេទវគ្គសិក្សា <span class="text-danger">*</span></label>
+        <select name="course_category_id" id="course_category_id" class="form-control select2bs4 @error('course_category_id') is-invalid @enderror" required>
+            <option value="">-- ជ្រើសរើសប្រភេទវគ្គសិក្សា --</option>
+            @foreach ($courseCategories as $category)
+                <option value="{{ $category->course_category_id }}" @selected((string) old('course_category_id', $course->course_category_id ?? '') === (string) $category->course_category_id)>
+                    {{ $category->category_name }}
+                </option>
+            @endforeach
+        </select>
+        @error('course_category_id')
+            <span class="invalid-feedback d-block">{{ $message }}</span>
+        @enderror
+    </div>
+
+    <div class="col-md-6 form-group">
+        <label for="department_id">ដេប៉ាតឺម៉ង់ (Department)</label>
+        <select name="department_id" id="department_id" class="form-control select2bs4 @error('department_id') is-invalid @enderror">
+            <option value="">-- ជ្រើសរើសដេប៉ាតឺម៉ង់ --</option>
+            @foreach ($departments ?? [] as $department)
+                <option value="{{ $department->department_id }}" @selected((string) old('department_id', $course->department_id ?? '') === (string) $department->department_id)>
+                    {{ $department->department_name }} ({{ $department->department_code }})
+                </option>
+            @endforeach
+        </select>
+        @error('department_id')
+            <span class="invalid-feedback d-block">{{ $message }}</span>
+        @enderror
+    </div>
 </div>
 
 <div class="form-group">

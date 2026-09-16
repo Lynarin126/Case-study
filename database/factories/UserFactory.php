@@ -24,8 +24,23 @@ class UserFactory extends Factory
      */
     public function definition(): array
     {
+        $khmerFirsts = ['វណ្ណៈ', 'សុភា', 'ពិសិដ្ឋ', 'សុវណ្ណ', 'រតនា', 'ស្រីមុំ', 'បុនរិទ្ធ', 'ចិន្តា'];
+        $khmerLasts = ['សុខ', 'ជា', 'ហេង', 'ចាន់', 'កែវ', 'អ៊ុក', 'ឈុំ', 'ម៉ៅ'];
+        $latinFirsts = ['Vannak', 'Sophea', 'Piseth', 'Sovann', 'Rattana', 'Sreymom', 'Bunrith', 'Chinda'];
+        $latinLasts = ['Sok', 'Chea', 'Heng', 'Chan', 'Keo', 'Ouk', 'Chhom', 'Mao'];
+
+        $index = fake()->numberBetween(0, count($khmerFirsts) - 1);
+        $kFirst = $khmerFirsts[$index];
+        $kLast = $khmerLasts[$index];
+        $lFirst = $latinFirsts[$index];
+        $lLast = $latinLasts[$index];
+
         return [
-            'name' => fake()->name(),
+            'first_name' => $kFirst,
+            'last_name' => $kLast,
+            'first_name_latin' => $lFirst,
+            'last_name_latin' => $lLast,
+            'name' => "{$kFirst} {$kLast}",
             'email' => fake()->unique()->safeEmail(),
             'email_verified_at' => now(),
             'password' => static::$password ??= Hash::make('password'),

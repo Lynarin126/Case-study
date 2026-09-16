@@ -12,12 +12,13 @@
 
 <div class="row">
     <div class="col-md-6 form-group">
-        <label for="first_name">នាមខ្លួន</label>
+        <label for="first_name">នាមខ្លួន (First Name) <span class="text-danger">*</span></label>
         <input type="text"
             name="first_name"
             id="first_name"
             class="form-control @error('first_name') is-invalid @enderror"
             value="{{ old('first_name', $student->first_name ?? '') }}"
+            placeholder="ឧ. ពិសិដ្ឋ"
             maxlength="100"
             required>
         @error('first_name')
@@ -26,18 +27,52 @@
     </div>
     
     <div class="col-md-6 form-group">
-        <label for="last_name">នាមត្រកូល</label>
+        <label for="last_name">នាមត្រកូល (Last Name)</label>
         <input type="text"
             name="last_name"
             id="last_name"
             class="form-control @error('last_name') is-invalid @enderror"
             value="{{ old('last_name', $student->last_name ?? '') }}"
+            placeholder="ឧ. ហេង"
             maxlength="100">
         @error('last_name')
             <span class="invalid-feedback">{{ $message }}</span>
         @enderror
     </div>
 </div>
+
+<div class="row">
+    <div class="col-md-6 form-group">
+        <label for="first_name_latin">First Name (Latin) <span class="text-danger">*</span></label>
+        <input type="text"
+            name="first_name_latin"
+            id="first_name_latin"
+            class="form-control @error('first_name_latin') is-invalid @enderror"
+            value="{{ old('first_name_latin', $student->first_name_latin ?? '') }}"
+            placeholder="e.g. Piseth"
+            maxlength="100"
+            required>
+        @error('first_name_latin')
+            <span class="invalid-feedback">{{ $message }}</span>
+        @enderror
+    </div>
+    
+    <div class="col-md-6 form-group">
+        <label for="last_name_latin">Last Name (Latin)</label>
+        <input type="text"
+            name="last_name_latin"
+            id="last_name_latin"
+            class="form-control @error('last_name_latin') is-invalid @enderror"
+            value="{{ old('last_name_latin', $student->last_name_latin ?? '') }}"
+            placeholder="e.g. Heng"
+            maxlength="100">
+        @error('last_name_latin')
+            <span class="invalid-feedback">{{ $message }}</span>
+        @enderror
+    </div>
+</div>
+
+<hr class="my-4">
 
 <div class="row">
     <div class="col-md-6 form-group">
@@ -117,7 +152,7 @@
     @enderror
 </div>
 
-<div class="d-flex justify-content-end">
+<div class="d-flex justify-content-end mt-4">
     <a href="{{ route('students.index') }}" class="btn btn-secondary mr-2">
         <i class="fas fa-arrow-left mr-1"></i>
         ត្រឡប់ក្រោយ

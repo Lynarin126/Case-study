@@ -9,13 +9,14 @@ class CourseService
 {
     public function getAll(): Collection
     {
-        return Course::with(['category', 'teachers', 'lessons'])->latest('course_id')->get();
+        return Course::with(['category', 'department', 'teachers', 'lessons'])->latest('course_id')->get();
     }
 
     public function create(array $data): Course
     {
         return Course::create([
             'course_category_id' => $data['course_category_id'],
+            'department_id' => $data['department_id'] ?? null,
             'course_code' => $this->generateCode(),
             'course_name' => $data['course_name'],
             'description' => $data['description'] ?? null,
@@ -26,6 +27,7 @@ class CourseService
     {
         return $course->update([
             'course_category_id' => $data['course_category_id'],
+            'department_id' => $data['department_id'] ?? null,
             'course_name' => $data['course_name'],
             'description' => $data['description'] ?? null,
         ]);

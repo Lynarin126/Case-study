@@ -477,7 +477,7 @@
     .studio-sticky-bar {
         position: fixed;
         bottom: 0;
-        left: var(--sidebar-width, 300px);
+        left: var(--lms-sidebar-width, 270px);
         right: 0;
         background: rgba(255, 255, 255, 0.94);
         backdrop-filter: blur(12px);
@@ -489,10 +489,10 @@
         justify-content: space-between;
         z-index: 1030;
         box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.05);
-        transition: left 0.3s ease;
+        transition: left 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     }
     .sidebar-collapse .studio-sticky-bar {
-        left: 4.6rem;
+        left: var(--lms-sidebar-collapsed-width, 74px);
     }
     .btn-publish-gradient {
         background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
@@ -1516,10 +1516,18 @@ $(function () {
         const courseId = $('#courseSelect').val();
         $('#moduleSelect option').each(function () {
             const optionCourse = $(this).data('course');
-            $(this).toggle(!optionCourse || String(optionCourse) === String(courseId));
+            if (!optionCourse) {
+                $(this).prop('disabled', false);
+            } else if (String(optionCourse) === String(courseId)) {
+                $(this).prop('disabled', false);
+            } else {
+                $(this).prop('disabled', true);
+            }
         });
-        if ($('#moduleSelect option:selected').is(':hidden')) {
+        if ($('#moduleSelect option:selected').is(':disabled')) {
             $('#moduleSelect').val('').trigger('change');
+        } else {
+            $('#moduleSelect').trigger('change.select2');
         }
     }
 

@@ -231,7 +231,9 @@ class SampleDataSeeder extends Seeder
             [
                 'code' => 'TCH-001',
                 'first_name' => 'សុវណ្ណ',
-                'last_name' => 'សុខ (Sovann Sok)',
+                'last_name' => 'សុខ',
+                'first_name_latin' => 'Sovann',
+                'last_name_latin' => 'Sok',
                 'gender' => 'Male',
                 'email' => 'sovann.sok@lms.edu.kh',
                 'phone' => '012 345 678',
@@ -241,7 +243,9 @@ class SampleDataSeeder extends Seeder
             [
                 'code' => 'TCH-002',
                 'first_name' => 'វិច្ឆិកា',
-                'last_name' => 'ចាន់ (Vicheka Chan)',
+                'last_name' => 'ចាន់',
+                'first_name_latin' => 'Vicheka',
+                'last_name_latin' => 'Chan',
                 'gender' => 'Female',
                 'email' => 'vicheka.chan@lms.edu.kh',
                 'phone' => '098 765 432',
@@ -251,7 +255,9 @@ class SampleDataSeeder extends Seeder
             [
                 'code' => 'TCH-003',
                 'first_name' => 'រតនា',
-                'last_name' => 'កែវ (Rattana Keo)',
+                'last_name' => 'កែវ',
+                'first_name_latin' => 'Rattana',
+                'last_name_latin' => 'Keo',
                 'gender' => 'Male',
                 'email' => 'rattana.keo@lms.edu.kh',
                 'phone' => '077 112 233',
@@ -261,7 +267,9 @@ class SampleDataSeeder extends Seeder
             [
                 'code' => 'TCH-004',
                 'first_name' => 'ស្រីមុំ',
-                'last_name' => 'អ៊ុក (Sreymom Ouk)',
+                'last_name' => 'អ៊ុក',
+                'first_name_latin' => 'Sreymom',
+                'last_name_latin' => 'Ouk',
                 'gender' => 'Female',
                 'email' => 'sreymom.ouk@lms.edu.kh',
                 'phone' => '086 443 221',
@@ -271,7 +279,9 @@ class SampleDataSeeder extends Seeder
             [
                 'code' => 'TCH-005',
                 'first_name' => 'តារា',
-                'last_name' => 'ជ្រុន (Dara Chrun)',
+                'last_name' => 'ជ្រុន',
+                'first_name_latin' => 'Dara',
+                'last_name_latin' => 'Chrun',
                 'gender' => 'Male',
                 'email' => 'dara.chrun@lms.edu.kh',
                 'phone' => '010 889 977',
@@ -287,6 +297,8 @@ class SampleDataSeeder extends Seeder
                 [
                     'first_name' => $t['first_name'],
                     'last_name' => $t['last_name'],
+                    'first_name_latin' => $t['first_name_latin'],
+                    'last_name_latin' => $t['last_name_latin'],
                     'gender' => $t['gender'],
                     'email' => $t['email'],
                     'phone' => $t['phone'],
@@ -301,6 +313,10 @@ class SampleDataSeeder extends Seeder
             $teacherUser = User::updateOrCreate(
                 ['email' => $t['email']],
                 [
+                    'first_name' => $t['first_name'],
+                    'last_name' => $t['last_name'],
+                    'first_name_latin' => $t['first_name_latin'],
+                    'last_name_latin' => $t['last_name_latin'],
                     'name' => trim($t['first_name'] . ' ' . $t['last_name']),
                     'password' => 'password',
                     'email_verified_at' => now(),
@@ -313,14 +329,14 @@ class SampleDataSeeder extends Seeder
         // 6. Students
         // ---------------------------------------------------------------------
         $studentsData = [
-            ['code' => 'STU-1001', 'first' => 'ពិសិដ្ឋ', 'last' => 'ហេង (Piseth Heng)', 'gender' => 'Male', 'email' => 'piseth.heng@student.edu.kh', 'phone' => '092 112 334', 'dob' => '2004-03-12'],
-            ['code' => 'STU-1002', 'first' => 'សុភា', 'last' => 'ជា (Sophea Chea)', 'gender' => 'Female', 'email' => 'sophea.chea@student.edu.kh', 'phone' => '093 223 445', 'dob' => '2003-08-25'],
-            ['code' => 'STU-1003', 'first' => 'បុនរិទ្ធ', 'last' => 'ឈុំ (Bunrith Chhom)', 'gender' => 'Male', 'email' => 'bunrith.chhom@student.edu.kh', 'phone' => '096 334 556', 'dob' => '2004-11-05'],
-            ['code' => 'STU-1004', 'first' => 'ស្រីពៅ', 'last' => 'ជា (Sreypov Chea)', 'gender' => 'Female', 'email' => 'sreypov.chea@student.edu.kh', 'phone' => '088 445 667', 'dob' => '2005-01-18'],
-            ['code' => 'STU-1005', 'first' => 'សុវណ្ណារិទ្ធ', 'last' => 'លី (Sovannarith Ly)', 'gender' => 'Male', 'email' => 'sovannarith.ly@student.edu.kh', 'phone' => '070 556 778', 'dob' => '2003-05-30'],
-            ['code' => 'STU-1006', 'first' => 'សុធា', 'last' => 'នួន (Sothea Noun)', 'gender' => 'Female', 'email' => 'sothea.noun@student.edu.kh', 'phone' => '089 667 889', 'dob' => '2004-09-14'],
-            ['code' => 'STU-1007', 'first' => 'វណ្ណៈ', 'last' => 'ស៊ិន (Vannak Sin)', 'gender' => 'Male', 'email' => 'vannak.sin@student.edu.kh', 'phone' => '017 334 990', 'dob' => '2003-12-04'],
-            ['code' => 'STU-1008', 'first' => 'ចិន្តា', 'last' => 'ម៉ៅ (Chinda Mao)', 'gender' => 'Female', 'email' => 'chinda.mao@student.edu.kh', 'phone' => '097 554 112', 'dob' => '2004-07-22'],
+            ['code' => 'STU-1001', 'first' => 'ពិសិដ្ឋ', 'last' => 'ហេង', 'first_latin' => 'Piseth', 'last_latin' => 'Heng', 'gender' => 'Male', 'email' => 'piseth.heng@student.edu.kh', 'phone' => '092 112 334', 'dob' => '2004-03-12'],
+            ['code' => 'STU-1002', 'first' => 'សុភា', 'last' => 'ជា', 'first_latin' => 'Sophea', 'last_latin' => 'Chea', 'gender' => 'Female', 'email' => 'sophea.chea@student.edu.kh', 'phone' => '093 223 445', 'dob' => '2003-08-25'],
+            ['code' => 'STU-1003', 'first' => 'បុនរិទ្ធ', 'last' => 'ឈុំ', 'first_latin' => 'Bunrith', 'last_latin' => 'Chhom', 'gender' => 'Male', 'email' => 'bunrith.chhom@student.edu.kh', 'phone' => '096 334 556', 'dob' => '2004-11-05'],
+            ['code' => 'STU-1004', 'first' => 'ស្រីពៅ', 'last' => 'ជា', 'first_latin' => 'Sreypov', 'last_latin' => 'Chea', 'gender' => 'Female', 'email' => 'sreypov.chea@student.edu.kh', 'phone' => '088 445 667', 'dob' => '2005-01-18'],
+            ['code' => 'STU-1005', 'first' => 'សុវណ្ណារិទ្ធ', 'last' => 'លី', 'first_latin' => 'Sovannarith', 'last_latin' => 'Ly', 'gender' => 'Male', 'email' => 'sovannarith.ly@student.edu.kh', 'phone' => '070 556 778', 'dob' => '2003-05-30'],
+            ['code' => 'STU-1006', 'first' => 'សុធា', 'last' => 'នួន', 'first_latin' => 'Sothea', 'last_latin' => 'Noun', 'gender' => 'Female', 'email' => 'sothea.noun@student.edu.kh', 'phone' => '089 667 889', 'dob' => '2004-09-14'],
+            ['code' => 'STU-1007', 'first' => 'វណ្ណៈ', 'last' => 'ស៊ិន', 'first_latin' => 'Vannak', 'last_latin' => 'Sin', 'gender' => 'Male', 'email' => 'vannak.sin@student.edu.kh', 'phone' => '017 334 990', 'dob' => '2003-12-04'],
+            ['code' => 'STU-1008', 'first' => 'ចិន្តា', 'last' => 'ម៉ៅ', 'first_latin' => 'Chinda', 'last_latin' => 'Mao', 'gender' => 'Female', 'email' => 'chinda.mao@student.edu.kh', 'phone' => '097 554 112', 'dob' => '2004-07-22'],
         ];
 
         $studentModels = [];
@@ -330,6 +346,8 @@ class SampleDataSeeder extends Seeder
                 [
                     'first_name' => $s['first'],
                     'last_name' => $s['last'],
+                    'first_name_latin' => $s['first_latin'],
+                    'last_name_latin' => $s['last_latin'],
                     'gender' => $s['gender'],
                     'email' => $s['email'],
                     'phone' => $s['phone'],
@@ -343,6 +361,10 @@ class SampleDataSeeder extends Seeder
             $studentUser = User::updateOrCreate(
                 ['email' => $s['email']],
                 [
+                    'first_name' => $s['first'],
+                    'last_name' => $s['last'],
+                    'first_name_latin' => $s['first_latin'],
+                    'last_name_latin' => $s['last_latin'],
                     'name' => trim($s['first'] . ' ' . $s['last']),
                     'password' => 'password',
                     'email_verified_at' => now(),
@@ -356,25 +378,57 @@ class SampleDataSeeder extends Seeder
         // ---------------------------------------------------------------------
         $adminUser = User::updateOrCreate(
             ['email' => 'admin@example.com'],
-            ['name' => 'System Super Administrator', 'password' => 'password', 'email_verified_at' => now()]
+            [
+                'first_name' => 'អភិបាល',
+                'last_name' => 'ប្រព័ន្ធ',
+                'first_name_latin' => 'System',
+                'last_name_latin' => 'Admin',
+                'name' => 'អភិបាល ប្រព័ន្ធ',
+                'password' => 'password',
+                'email_verified_at' => now()
+            ]
         );
         $adminUser->roles()->syncWithoutDetaching([$superAdminRole->id]);
 
         $testUser = User::updateOrCreate(
             ['email' => 'test@example.com'],
-            ['name' => 'Test Super Admin', 'password' => 'password', 'email_verified_at' => now()]
+            [
+                'first_name' => 'តេស្ត',
+                'last_name' => 'អភិបាល',
+                'first_name_latin' => 'Test',
+                'last_name_latin' => 'Admin',
+                'name' => 'តេស្ត អភិបាល',
+                'password' => 'password',
+                'email_verified_at' => now()
+            ]
         );
         $testUser->roles()->syncWithoutDetaching([$superAdminRole->id]);
 
         $demoTeacher = User::updateOrCreate(
             ['email' => 'teacher@example.com'],
-            ['name' => 'Instructor Sovann Sok (Demo)', 'password' => 'password', 'email_verified_at' => now()]
+            [
+                'first_name' => 'សុវណ្ណ',
+                'last_name' => 'សុខ',
+                'first_name_latin' => 'Sovann',
+                'last_name_latin' => 'Sok',
+                'name' => 'សុវណ្ណ សុខ',
+                'password' => 'password',
+                'email_verified_at' => now()
+            ]
         );
         $demoTeacher->roles()->syncWithoutDetaching([$instructorRole->id]);
 
         $demoStudent = User::updateOrCreate(
             ['email' => 'student@example.com'],
-            ['name' => 'Student Piseth Heng (Demo)', 'password' => 'password', 'email_verified_at' => now()]
+            [
+                'first_name' => 'ពិសិដ្ឋ',
+                'last_name' => 'ហេង',
+                'first_name_latin' => 'Piseth',
+                'last_name_latin' => 'Heng',
+                'name' => 'ពិសិដ្ឋ ហេង',
+                'password' => 'password',
+                'email_verified_at' => now()
+            ]
         );
         $demoStudent->roles()->syncWithoutDetaching([$studentRole->id]);
 

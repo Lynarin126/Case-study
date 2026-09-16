@@ -43,8 +43,8 @@
                 <tr>
                     <th>ល.រ</th>
                     <th>កូដ</th>
-                    <th>នាមខ្លួន</th>
-                    <th>នាមត្រកូល</th>
+                    <th>ឈ្មោះខ្មែរ (Khmer Name)</th>
+                    <th>ឈ្មោះឡាតាំង (Latin Name)</th>
                     <th>ភេទ</th>
                     <th>លេខទូរស័ព្ទ</th>
                     <th>ស្ថានភាព</th>
@@ -56,8 +56,8 @@
                     <tr>
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $teacher->teacher_code }}</td>
-                        <td>{{ $teacher->first_name }}</td>
-                        <td>{{ $teacher->last_name }}</td>
+                        <td class="font-weight-bold text-dark">{{ $teacher->khmer_name ?: '-' }}</td>
+                        <td class="text-primary">{{ $teacher->latin_name ?: '-' }}</td>
                         <td>{{ $teacher->gender }}</td>
                         <td>{{ $teacher->phone }}</td>
                         <td>
