@@ -1,11 +1,130 @@
-<aside class="main-sidebar sidebar-dark-primary elevation-4 sidebar-fixed">
-    <a href="{{ route('dashboard') }}" class="brand-link d-flex align-items-center">
-        <img src="{{ asset('backend/dist/img/spilogo.png') }}"
-            alt="SPI Logo"
-            class="brand-image img-circle elevation-3"
-            style="opacity:.9;width:45px;height:45px;">
-        <span class="brand-text font-weight-light ml-2">វិទ្យាស្ថាន សន្តប៉ូល</span>
-    </a>
+<aside class="main-sidebar sidebar-dark-primary elevation-4 sidebar-fixed sidebar-premium">
+<style>
+    /* ========================================
+       PREMIUM LIGHT GREEN SIDEBAR
+       ======================================== */
+
+    .sidebar-premium {
+        background: #ecfdf5 !important;
+        border-right: 1px solid #d1fae5;
+    }
+
+    /* Brand */
+    .sidebar-premium .brand-link {
+        border-bottom: 1px solid #d1fae5;
+        padding: 0.9rem 1rem;
+        background: #ecfdf5;
+    }
+
+    .sidebar-premium .brand-text {
+        font-weight: 600 !important;
+        font-size: 1rem;
+        letter-spacing: 0.01em;
+        color: #065f46 !important;
+    }
+
+    /* User Panel */
+    .sidebar-premium .user-panel {
+        border-bottom: 1px solid #d1fae5;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .sidebar-premium .user-panel .image img {
+        border: 2px solid #86efac;
+    }
+
+    .sidebar-premium .user-panel .info a.text-white {
+        font-size: 0.9rem;
+        color: #064e3b !important;
+    }
+
+    /* Info Button */
+    .sidebar-premium .btn-info {
+        background: #10b981;
+        border-color: #10b981;
+        color: #fff;
+    }
+
+    .sidebar-premium .btn-info:hover {
+        background: #059669;
+        border-color: #059669;
+    }
+
+    /* Section Header */
+    .sidebar-premium .nav-header {
+        color: #6b7280 !important;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        padding: 1rem 1rem 0.4rem;
+    }
+
+    /* Main Navigation */
+    .sidebar-premium .nav-sidebar > .nav-item > .nav-link {
+        border-radius: 8px;
+        margin: 0.1rem 0.6rem;
+        padding: 0.55rem 0.8rem;
+        color: #374151;
+        font-size: 0.87rem;
+        transition: all 0.15s ease;
+    }
+
+    /* Hover */
+    .sidebar-premium .nav-sidebar > .nav-item > .nav-link:hover {
+        background: #d1fae5;
+        color: #065f46;
+    }
+
+    /* Active */
+    .sidebar-premium .nav-sidebar > .nav-item > .nav-link.active {
+        background: #10b981 !important;
+        color: #fff !important;
+        box-shadow: 0 2px 8px rgba(16, 185, 129, 0.30);
+    }
+
+    /* Sub Menu */
+    .sidebar-premium .nav-treeview > .nav-item > .nav-link {
+        border-radius: 8px;
+        margin: 0.05rem 0.6rem 0.05rem 1.4rem;
+        padding: 0.45rem 0.8rem;
+        font-size: 0.83rem;
+        color: #6b7280;
+    }
+
+    /* Sub Menu Hover */
+    .sidebar-premium .nav-treeview > .nav-item > .nav-link:hover {
+        background: #d1fae5;
+        color: #047857;
+    }
+
+    /* Sub Menu Active */
+    .sidebar-premium .nav-treeview > .nav-item > .nav-link.active {
+        background: #a7f3d0 !important;
+        color: #065f46 !important;
+    }
+
+    /* Icons */
+    .sidebar-premium .nav-icon {
+        font-size: 0.9rem;
+        width: 1.4rem;
+        color: #059669;
+    }
+
+    /* Active Icon */
+    .sidebar-premium .nav-link.active .nav-icon {
+        color: #fff !important;
+    }
+</style>
+
+ <a href="{{ route('dashboard') }}" class="brand-link d-flex align-items-center">
+    <img src="{{ asset('backend/dist/img/spilogo.png') }}"
+        alt="SPI Logo"
+        class="brand-image rounded elevation-3"
+        style="opacity:.9;width:45px;height:45px;">
+    <span class="brand-text font-weight-light ml-2">វិទ្យាស្ថាន សន្តប៉ូល</span>
+</a>
 
     <div class="sidebar">
         <div class="user-panel mt-3 pb-3 mb-3 d-flex align-items-center">

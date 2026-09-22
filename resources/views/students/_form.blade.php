@@ -4,7 +4,7 @@
     <label for="student_code">កូដនិស្សិត</label>
     <input type="text"
         id="student_code"
-        class="form-control"
+        class="form-control form-control-readonly"
         value="{{ $student->student_code ?? $studentCode ?? '' }}"
         readonly>
     <small class="form-text text-muted">កូដនេះបង្កើតដោយស្វ័យប្រវត្តិ។</small>
@@ -72,7 +72,7 @@
     </div>
 </div>
 
-<hr class="my-4">
+<hr class="form-divider my-4">
 
 <div class="row">
     <div class="col-md-6 form-group">
@@ -152,7 +152,7 @@
     @enderror
 </div>
 
-<div class="d-flex justify-content-end mt-4">
+<div class="d-flex justify-content-end mt-4 form-actions-bar">
     <a href="{{ route('students.index') }}" class="btn btn-secondary mr-2">
         <i class="fas fa-arrow-left mr-1"></i>
         ត្រឡប់ក្រោយ
