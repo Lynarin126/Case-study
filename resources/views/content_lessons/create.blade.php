@@ -9,15 +9,15 @@
        SENIOR UI DESIGN SYSTEM - LMS CONTENT STUDIO
        =================================================== */
     :root {
-        --studio-primary: #2563eb;
-        --studio-primary-hover: #1d4ed8;
-        --studio-primary-soft: #eff6ff;
+        --studio-primary: #16a34a;
+        --studio-primary-hover: #15803d;
+        --studio-primary-soft: #f0fdf4;
         --studio-success: #10b981;
         --studio-success-soft: #ecfdf5;
         --studio-warning: #f59e0b;
         --studio-warning-soft: #fffbeb;
-        --studio-purple: #8b5cf6;
-        --studio-purple-soft: #f5f3ff;
+        --studio-purple: #22c55e;
+        --studio-purple-soft: #f0fdf4;
         --studio-rose: #f43f5e;
         --studio-rose-soft: #fff1f2;
         --studio-cyan: #06b6d4;
@@ -51,7 +51,7 @@
         left: 0;
         width: 6px;
         height: 100%;
-        background: linear-gradient(180deg, var(--studio-primary) 0%, #60a5fa 100%);
+        background: linear-gradient(180deg, var(--studio-primary) 0%, #4ade80 100%);
     }
     .builder-hero-title {
         font-size: 24px;
@@ -166,7 +166,7 @@
     .nav-step-item.active .nav-step-icon {
         background: var(--studio-primary);
         color: #ffffff;
-        box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+        box-shadow: 0 4px 10px rgba(22, 163, 74, 0.3);
     }
     .nav-step-info {
         display: flex;
@@ -185,7 +185,7 @@
         font-weight: 500;
     }
     .nav-step-item.active .nav-step-sub {
-        color: #60a5fa;
+        color: #4ade80;
     }
     .type-pill-indicator {
         margin-left: auto;
@@ -197,7 +197,7 @@
         font-weight: 700;
     }
     .nav-step-item.active .type-pill-indicator {
-        background: #dbeafe;
+        background: #dcfce7;
         color: var(--studio-primary);
     }
 
@@ -265,8 +265,8 @@
     }
     .type-radio-card.active {
         border-color: var(--studio-primary);
-        background: #f0f7ff;
-        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12), 0 4px 12px rgba(37, 99, 235, 0.08);
+        background: #f0fdf4;
+        box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.12), 0 4px 12px rgba(22, 163, 74, 0.08);
     }
     .type-radio-card input {
         position: absolute;
@@ -284,7 +284,7 @@
         flex-shrink: 0;
         transition: all 0.2s ease;
     }
-    .type-card-icon.video { background: #e0e7ff; color: #4338ca; }
+    .type-card-icon.video { background: #dcfce7; color: #15803d; }
     .type-card-icon.lesson { background: #dcfce7; color: #15803d; }
     .type-card-icon.file { background: #fef3c7; color: #b45309; }
     .type-card-icon.quiz { background: #f3e8ff; color: #7e22ce; }
@@ -343,7 +343,7 @@
     }
     .form-control:focus {
         border-color: var(--studio-primary);
-        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+        box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.15);
     }
 
     /* Live Slug Preview Widget */
@@ -419,8 +419,8 @@
 
     /* Drop Zone / Upload Area */
     .modern-dropzone {
-        border: 2px dashed #93c5fd;
-        background: #f8fbff;
+        border: 2px dashed #86efac;
+        background: #f0fdf4;
         border-radius: var(--studio-radius-md);
         padding: 28px 20px;
         text-align: center;
@@ -430,14 +430,14 @@
     }
     .modern-dropzone:hover, .modern-dropzone.dragover {
         border-color: var(--studio-primary);
-        background: #eff6ff;
+        background: #f0fdf4;
         transform: scale(1.005);
     }
     .dropzone-icon-circle {
         width: 54px;
         height: 54px;
         border-radius: 50%;
-        background: #dbeafe;
+        background: #dcfce7;
         color: var(--studio-primary);
         display: inline-flex;
         align-items: center;
@@ -495,18 +495,18 @@
         left: var(--lms-sidebar-collapsed-width, 74px);
     }
     .btn-publish-gradient {
-        background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+        background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
         border: none;
         color: #ffffff;
         font-weight: 700;
         padding: 10px 22px;
         border-radius: 8px;
-        box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+        box-shadow: 0 4px 14px rgba(22, 163, 74, 0.35);
         transition: all 0.2s ease;
     }
     .btn-publish-gradient:hover {
-        background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
-        box-shadow: 0 6px 18px rgba(37, 99, 235, 0.45);
+        background: linear-gradient(135deg, #15803d 0%, #166534 100%);
+        box-shadow: 0 6px 18px rgba(22, 163, 74, 0.45);
         color: #ffffff;
         transform: translateY(-1px);
     }

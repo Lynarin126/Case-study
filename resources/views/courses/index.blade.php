@@ -1,4 +1,3 @@
-```blade
 @extends('layouts.master')
 
 @section('title', 'វគ្គសិក្សា | Courses | LMS')
@@ -355,7 +354,7 @@
     }
 
     .course-thumb-blue {
-        background: linear-gradient(135deg, #60a5fa, #2563eb);
+        background: linear-gradient(135deg, #4ade80, #16a34a);
     }
 
     .course-thumb-emerald {
@@ -641,6 +640,32 @@
         border-radius: 6px;
         font-size: 12px;
         transition: all .15s ease;
+    }
+
+    .course-page a:focus-visible,
+    .course-page button:focus-visible,
+    .course-page input:focus-visible,
+    .course-page select:focus-visible {
+        outline: 2px solid var(--green-dark);
+        outline-offset: 2px;
+    }
+
+    .course-card-actions-browse .course-action-browse {
+        flex: 1;
+        justify-content: space-between;
+        min-height: 40px;
+        padding: 0 14px;
+        border: 0;
+        border-radius: 6px;
+        background: var(--green);
+        color: #fff;
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    .course-card-actions-browse .course-action-browse:hover {
+        background: var(--green-dark);
+        color: #fff;
     }
 
     .course-action-primary {
@@ -1030,7 +1055,11 @@
                     </h1>
 
                     <p class="course-page-subtitle">
+                        @auth
                         គ្រប់គ្រងព័ត៌មានវគ្គសិក្សា គ្រូបង្រៀន និងសិស្សដែលបានចុះឈ្មោះ។
+                        @else
+                        ស្វែងរកវគ្គសិក្សា និងមើលព័ត៌មានសង្ខេបនៃមេរៀននីមួយៗ។
+                        @endauth
                     </p>
 
                 </div>
@@ -1142,7 +1171,11 @@
                     </h2>
 
                     <p class="mb-4">
+                        @auth
                         ចាប់ផ្តើមដោយបង្កើតវគ្គសិក្សាដំបូងរបស់អ្នក។
+                        @else
+                        វគ្គសិក្សានឹងបង្ហាញនៅទីនេះ នៅពេលមានទិន្នន័យ។
+                        @endauth
                     </p>
 
                     @auth
@@ -1697,7 +1730,17 @@
                                 </form>
 
                             </div>
-
+                        @else
+                            <div class="course-card-actions course-card-actions-browse">
+                                <a
+                                    href="{{ route('courses.modules.index', $course) }}"
+                                    class="btn course-action-browse"
+                                    title="មើលមាតិកាវគ្គសិក្សា"
+                                >
+                                    មើលមាតិកា
+                                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
                         @endauth
 
                     </article>
@@ -2832,4 +2875,3 @@
 @endpush
 
 @endsection
-```

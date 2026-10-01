@@ -492,7 +492,7 @@
     }
 
     .profile-hero {
-        background: linear-gradient(135deg, #f4f8fd 0%, #e9f1fb 100%);
+        background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
         border-bottom: 1px solid #eef1f6;
         padding: 28px 20px 22px;
         text-align: center;
@@ -524,8 +524,8 @@
         justify-content: center;
         width: 100%;
         height: 100%;
-        background: #e8f0fe;
-        color: #1a73e8;
+        background: #ecfdf5;
+        color: #16a34a;
         font-size: 40px;
         font-weight: 600;
         letter-spacing: 1px;
@@ -622,8 +622,8 @@
         justify-content: center;
         width: 40px;
         height: 40px;
-        background: #e8f0fe;
-        color: #1a73e8;
+        background: #ecfdf5;
+        color: #16a34a;
         border-radius: 10px;
         font-size: 15px;
     }

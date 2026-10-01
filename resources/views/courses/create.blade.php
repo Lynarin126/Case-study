@@ -103,9 +103,9 @@
         width: 2.25rem;
         height: 2.25rem;
         border-radius: .6rem;
-        background: rgba(0, 123, 255, .1);
+        background: rgba(22, 163, 74, .1);
         font-size: .95rem;
-        color: var(--primary, #007bff);
+        color: var(--primary, #16a34a);
     }
 
     .course-form-page .course-form-card .card-title {
@@ -143,8 +143,8 @@
 
     .course-form-page .course-form-card .form-control:focus,
     .course-form-page .course-form-card .custom-select:focus {
-        border-color: var(--primary, #007bff);
-        box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .15);
+        border-color: var(--primary, #16a34a);
+        box-shadow: 0 0 0 .2rem rgba(22, 163, 74, .15);
     }
 
     .course-form-page .course-form-card .form-control.is-invalid,

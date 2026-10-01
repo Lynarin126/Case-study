@@ -18,8 +18,8 @@
     }
     .page-header-premium h1 i {
         font-size: 1.15rem;
-        color: #4f46e5;
-        background: #eef0ff;
+        color: #16a34a;
+        background: #ecfdf5;
         width: 38px;
         height: 38px;
         display: inline-flex;
@@ -43,7 +43,7 @@
         transition: color 0.15s ease;
     }
     .page-header-premium .breadcrumb-item a:hover {
-        color: #4f46e5;
+        color: #16a34a;
     }
     .page-header-premium .breadcrumb-item.active {
         color: #1e2432;
@@ -83,7 +83,7 @@
         left: 0;
         right: 0;
         height: 3px;
-        background: linear-gradient(90deg, #4f46e5, #818cf8);
+        background: linear-gradient(90deg, #16a34a, #4ade80);
     }
     .card-premium .card-header {
         padding: 1.1rem 1.75rem;
@@ -100,7 +100,7 @@
     }
 
     .btn-premium-primary {
-        background: #4f46e5;
+        background: #16a34a;
         border: none;
         border-radius: 10px;
         font-size: 0.83rem;
@@ -109,7 +109,7 @@
         transition: background 0.15s ease;
     }
     .btn-premium-primary:hover {
-        background: #4338ca;
+        background: #15803d;
         color: #fff;
     }
 
@@ -140,7 +140,7 @@
         transition: background 0.12s ease;
     }
     .table-premium tbody tr:hover {
-        background: #fafbff;
+        background: #fafefc;
     }
     .table-premium tbody tr:last-child td {
         border-bottom: none;
@@ -156,8 +156,8 @@
         height: 36px;
         min-width: 36px;
         border-radius: 10px;
-        background: #eef0ff;
-        color: #4f46e5;
+        background: #ecfdf5;
+        color: #16a34a;
         font-size: 0.85rem;
         font-weight: 700;
         display: flex;
@@ -194,8 +194,8 @@
         height: 24px;
         padding: 0 0.5rem;
         border-radius: 999px;
-        background: #eef0ff;
-        color: #4f46e5;
+        background: #ecfdf5;
+        color: #16a34a;
         font-size: 0.78rem;
         font-weight: 700;
     }

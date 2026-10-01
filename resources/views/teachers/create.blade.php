@@ -15,9 +15,9 @@
         --tp-muted: #94a3b8;
         --tp-border: #e9ecf2;
         --tp-surface: #ffffff;
-        --tp-accent: #4338ca;
-        --tp-accent-soft: #eef0ff;
-        --tp-accent-2: #7c3aed;
+        --tp-accent: #15803d;
+        --tp-accent-soft: #ecfdf5;
+        --tp-accent-2: #22c55e;
     }
 
     .teachers-page-header {
@@ -36,7 +36,7 @@
         font-size: 1.2rem;
         margin-right: 0.95rem;
         flex-shrink: 0;
-        box-shadow: 0 8px 20px -6px rgba(67, 56, 202, 0.45);
+        box-shadow: 0 8px 20px -6px rgba(21, 128, 61, 0.45);
     }
 
     .teachers-page-header h1 {
@@ -138,7 +138,7 @@
 
     .teachers-card .card-body .form-control:focus {
         border-color: var(--tp-accent);
-        box-shadow: 0 0 0 4px rgba(67, 56, 202, 0.1);
+        box-shadow: 0 0 0 4px rgba(21, 128, 61, 0.1);
         outline: none;
     }
 
@@ -206,13 +206,13 @@
         font-size: 0.85rem;
         padding: 0.65rem 1.6rem;
         border-radius: 12px;
-        box-shadow: 0 10px 22px -8px rgba(67, 56, 202, 0.5);
+        box-shadow: 0 10px 22px -8px rgba(21, 128, 61, 0.5);
         transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
     .teachers-card .card-body .btn-primary:hover {
         color: #fff;
         transform: translateY(-2px);
-        box-shadow: 0 14px 26px -8px rgba(67, 56, 202, 0.55);
+        box-shadow: 0 14px 26px -8px rgba(21, 128, 61, 0.55);
     }
 
     /* ---------- Responsive ---------- */
@@ -247,7 +247,7 @@
 <div class="card teachers-card">
     <div class="card-header">
         <h3 class="card-title mb-0">
-            <i class="fas fa-id-card" style="color:#4338ca;"></i>
+            <i class="fas fa-id-card" style="color:#15803d;"></i>
             ព័ត៌មានគ្រូបង្រៀន
         </h3>
     </div>

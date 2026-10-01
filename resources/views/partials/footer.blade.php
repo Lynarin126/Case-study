@@ -1,4 +1,3 @@
-```blade
 <style>
     .school-footer {
         background: #ffffff;
@@ -72,4 +71,3 @@
     </div>
 
 </footer>
-```

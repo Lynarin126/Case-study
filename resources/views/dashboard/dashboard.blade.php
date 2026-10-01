@@ -125,7 +125,7 @@
         ->map(fn ($count) => (int) $count)
         ->all();
     $popularChartColors = array_slice(
-        ['#1a73e8', '#17a2b8', '#28a745', '#ffc107', '#fd7e14', '#6f42c1'],
+        ['#16a34a', '#17a2b8', '#28a745', '#ffc107', '#fd7e14', '#6f42c1'],
         0,
         max(count($popularChartLabels), 1)
     );
@@ -138,7 +138,7 @@
     <div class="container-fluid px-0">
         <div class="row mb-2 align-items-center">
             <div class="col-sm-7">
-                <h1 class="mb-1 font-weight-bold">ផ្ទាំងគ្រប់គ្រង (Dashboard)</h1>
+                <h1 class="mb-1 font-weight-bold">ផ្ទាំងគ្រប់គ្រងព័ត៌មានទូទៅ</h1>
                 <p class="text-muted mb-0">ទិដ្ឋភាពទូទៅជាក់ស្តែងនៃប្រព័ន្ធគ្រប់គ្រងការសិក្សា (Real-time system overview)</p>
             </div>
             <div class="col-sm-5">
@@ -612,10 +612,14 @@
 @push('styles')
 <style>
     /* ================= Dashboard (presentation only) ================= */
+    .content-header + .row ~ .row {
+        margin-top: 1.25rem;
+    }
+
     .dash-card {
         background: #fff;
         border: 1px solid #eef1f6;
-        border-radius: 12px;
+        border-radius: 8px;
         box-shadow: 0 4px 16px rgba(16, 24, 40, .06);
         overflow: hidden;
     }
@@ -625,8 +629,9 @@
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
-        gap: 10px;
-        padding: 14px 18px;
+        gap: 12px;
+        min-height: 62px;
+        padding: 16px 20px;
         background: #fff;
         border-bottom: 1px solid #eef1f6;
     }
@@ -639,24 +644,33 @@
         color: #22303f;
         font-size: 1rem;
         font-weight: 600;
+        line-height: 1.6;
     }
 
     .dash-card-footer {
-        padding: 12px 18px;
+        padding: 12px 20px;
         text-align: center;
         background: #fbfcfe;
         border-top: 1px solid #eef1f6;
     }
 
     .dash-link {
-        color: #1a73e8;
+        color: #16a34a;
         font-size: .88rem;
         font-weight: 600;
     }
 
     .dash-link:hover {
-        color: #0b57d0;
+        color: #15803d;
         text-decoration: none;
+    }
+
+    .dash-link:focus-visible,
+    .kpi-footer:focus-visible,
+    .mini-stat:focus-visible,
+    .quick-action:focus-visible {
+        outline: 2px solid #16a34a;
+        outline-offset: 2px;
     }
 
     .dash-note {
@@ -690,11 +704,11 @@
         justify-content: center;
         width: 46px;
         height: 46px;
-        border-radius: 12px;
+        border-radius: 8px;
         font-size: 18px;
     }
 
-    .kpi-icon-primary { background: #e8f0fe; color: #1a73e8; }
+    .kpi-icon-primary { background: #ecfdf5; color: #16a34a; }
     .kpi-icon-info    { background: #e5f6fb; color: #0f7f9c; }
     .kpi-icon-success { background: #e7f6ed; color: #1e7e45; }
     .kpi-icon-warning { background: #fdf3e3; color: #a26a09; }
@@ -738,8 +752,8 @@
     }
 
     .kpi-footer:hover {
-        color: #1a73e8;
-        background: #f4f8fd;
+        color: #16a34a;
+        background: #f0fdf4;
         text-decoration: none;
     }
 
@@ -748,7 +762,7 @@
         display: flex;
         align-items: center;
         gap: 12px;
-        padding: 14px 15px;
+        padding: 15px 16px;
         color: inherit;
         background: #fff;
         border: 1px solid #eef1f6;
@@ -771,7 +785,7 @@
         justify-content: center;
         width: 38px;
         height: 38px;
-        border-radius: 10px;
+        border-radius: 8px;
         font-size: 15px;
     }
 
@@ -883,7 +897,7 @@
     }
 
     .dash-table tbody tr:hover {
-        background: #fafcff;
+        background: #fafefc;
     }
 
     /* ---------- Recent activities ---------- */
@@ -895,7 +909,7 @@
     .activity-item {
         display: flex;
         gap: 12px;
-        padding: 12px 0;
+        padding: 14px 0;
         color: inherit;
         border-bottom: 1px dashed #eef1f6;
     }
@@ -911,7 +925,7 @@
     }
 
     .activity-item:hover .activity-title {
-        color: #1a73e8;
+        color: #16a34a;
     }
 
     .activity-dot {
@@ -925,7 +939,7 @@
         font-size: 14px;
     }
 
-    .activity-dot-primary { background: #e8f0fe; color: #1a73e8; }
+    .activity-dot-primary { background: #ecfdf5; color: #16a34a; }
     .activity-dot-success { background: #e7f6ed; color: #1e7e45; }
     .activity-dot-info    { background: #e5f6fb; color: #0f7f9c; }
 
@@ -965,7 +979,7 @@
         display: flex;
         align-items: center;
         gap: 12px;
-        padding: 11px 13px;
+        padding: 12px 14px;
         color: inherit;
         background: #fbfcfe;
         border: 1px solid #eef1f6;
@@ -975,8 +989,8 @@
     .quick-action:hover {
         color: inherit;
         text-decoration: none;
-        background: #f4f8fd;
-        border-color: #d7e5fb;
+        background: #f0fdf4;
+        border-color: #dcfce7;
     }
 
     .quick-action-icon {
@@ -990,7 +1004,7 @@
         font-size: 14px;
     }
 
-    .qa-primary   { background: #e8f0fe; color: #1a73e8; }
+    .qa-primary   { background: #ecfdf5; color: #16a34a; }
     .qa-info      { background: #e5f6fb; color: #0f7f9c; }
     .qa-success   { background: #e7f6ed; color: #1e7e45; }
     .qa-warning   { background: #fdf3e3; color: #a26a09; }
@@ -1027,8 +1041,8 @@
     }
 
     .bg-primary-soft {
-        background-color: #e8f0fe;
-        color: #1a73e8;
+        background-color: #ecfdf5;
+        color: #16a34a;
     }
 
     .font-weight-600 {

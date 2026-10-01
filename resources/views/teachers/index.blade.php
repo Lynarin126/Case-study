@@ -15,9 +15,9 @@
         --tp-muted: #94a3b8;
         --tp-border: #e9ecf2;
         --tp-surface: #ffffff;
-        --tp-accent: #4338ca;
-        --tp-accent-soft: #eef0ff;
-        --tp-accent-2: #7c3aed;
+        --tp-accent: #15803d;
+        --tp-accent-soft: #ecfdf5;
+        --tp-accent-2: #22c55e;
         --tp-success: #0f9d63;
         --tp-success-soft: #e6f7ef;
     }
@@ -27,9 +27,9 @@
     }
 
     .teachers-page-header .page-icon {
-        width: 50px;
-        height: 50px;
-        border-radius: 14px;
+        width: 48px;
+        height: 48px;
+        border-radius: 8px;
         background: linear-gradient(145deg, var(--tp-accent), var(--tp-accent-2));
         color: #fff;
         display: inline-flex;
@@ -38,15 +38,15 @@
         font-size: 1.2rem;
         margin-right: 0.95rem;
         flex-shrink: 0;
-        box-shadow: 0 8px 20px -6px rgba(67, 56, 202, 0.45);
+        box-shadow: 0 8px 20px -6px rgba(21, 128, 61, 0.45);
     }
 
     .teachers-page-header h1 {
-        font-size: 1.6rem;
-        font-weight: 800;
+        font-size: 1.5rem;
+        font-weight: 700;
         color: var(--tp-ink);
         margin-bottom: 0.15rem;
-        letter-spacing: -0.02em;
+        letter-spacing: 0;
     }
 
     .teachers-page-header .text-muted {
@@ -87,7 +87,7 @@
     /* ---------- Card ---------- */
     .teachers-card {
         border: none;
-        border-radius: 20px;
+        border-radius: 8px;
         background: var(--tp-surface);
         box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04), 0 20px 40px -24px rgba(15, 23, 42, 0.18);
         overflow: hidden;
@@ -107,7 +107,7 @@
     .teachers-card .card-header {
         background: #fff;
         border-bottom: 1px solid var(--tp-border);
-        padding: 1.4rem 1.75rem;
+        padding: 1rem 1.25rem;
         display: flex;
         align-items: center;
         flex-wrap: wrap;
@@ -115,13 +115,13 @@
     }
 
     .teachers-card .card-title {
-        font-size: 1.1rem;
-        font-weight: 800;
+        font-size: 1rem;
+        font-weight: 700;
         color: var(--tp-ink);
         display: flex;
         align-items: center;
         gap: 0.6rem;
-        letter-spacing: -0.01em;
+        letter-spacing: 0;
     }
 
     .teachers-card .card-title .count-pill {
@@ -145,9 +145,9 @@
         color: #fff;
         font-weight: 700;
         font-size: 0.85rem;
-        padding: 0.65rem 1.35rem;
-        border-radius: 12px;
-        box-shadow: 0 10px 22px -8px rgba(67, 56, 202, 0.5);
+        padding: 0.6rem 1.15rem;
+        border-radius: 8px;
+        box-shadow: 0 10px 22px -8px rgba(21, 128, 61, 0.5);
         transition: transform 0.15s ease, box-shadow 0.15s ease;
         letter-spacing: 0.01em;
     }
@@ -155,7 +155,7 @@
     .btn-add-teacher:hover {
         color: #fff;
         transform: translateY(-2px);
-        box-shadow: 0 14px 26px -8px rgba(67, 56, 202, 0.55);
+        box-shadow: 0 14px 26px -8px rgba(21, 128, 61, 0.55);
     }
 
     .btn-icon-action {
@@ -164,7 +164,7 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        border-radius: 10px;
+        border-radius: 8px;
         border: 1px solid transparent;
         font-size: 0.8rem;
         transition: all 0.18s ease;
@@ -196,6 +196,12 @@
         transform: translateY(-1px);
     }
 
+    .btn-add-teacher:focus-visible,
+    .btn-icon-action:focus-visible {
+        outline: 2px solid var(--tp-accent);
+        outline-offset: 2px;
+    }
+
     /* ---------- Table ---------- */
     .table-responsive-teachers {
         overflow-x: auto;
@@ -211,20 +217,20 @@
     table.teachers-table thead th {
         background: #fafbfd;
         color: #7c8598;
-        font-size: 0.7rem;
-        font-weight: 800;
+        font-size: 0.72rem;
+        font-weight: 700;
         text-transform: uppercase;
-        letter-spacing: 0.06em;
+        letter-spacing: 0;
         border: none;
         border-bottom: 1px solid var(--tp-border);
-        padding: 1rem 1.2rem;
+        padding: 0.9rem 1rem;
         white-space: nowrap;
     }
 
     table.teachers-table tbody td {
         border: none;
         border-bottom: 1px solid #f2f3f7;
-        padding: 1rem 1.2rem;
+        padding: 0.9rem 1rem;
         vertical-align: middle;
         font-size: 0.875rem;
         color: #334155;
@@ -239,7 +245,7 @@
     }
 
     table.teachers-table tbody tr:hover {
-        background: linear-gradient(90deg, #f8f8ff, #fafbff);
+        background: linear-gradient(90deg, #f8fef9, #fafefc);
     }
 
     .row-index {
@@ -267,9 +273,9 @@
     }
 
     .teacher-avatar {
-        width: 42px;
-        height: 42px;
-        border-radius: 12px;
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
         background: linear-gradient(150deg, var(--tp-accent), var(--tp-accent-2));
         color: #fff;
         font-weight: 800;
@@ -278,7 +284,7 @@
         align-items: center;
         justify-content: center;
         flex-shrink: 0;
-        box-shadow: 0 6px 14px -5px rgba(67, 56, 202, 0.45);
+        box-shadow: 0 6px 14px -5px rgba(21, 128, 61, 0.45);
         position: relative;
     }
 
@@ -286,8 +292,8 @@
         content: "";
         position: absolute;
         inset: -3px;
-        border-radius: 14px;
-        border: 1.5px solid rgba(67, 56, 202, 0.18);
+        border-radius: 12px;
+        border: 1.5px solid rgba(21, 128, 61, 0.18);
     }
 
     .teacher-names .khmer-name {

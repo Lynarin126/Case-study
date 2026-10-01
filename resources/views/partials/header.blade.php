@@ -1,4 +1,3 @@
-```blade
 @php
     $khmerDate = \App\Helpers\KhmerDateHelper::format();
 @endphp
@@ -280,7 +279,7 @@
                 aria-expanded="false"
             >
                 <img
-                    src="{{ asset('backend/dist/img/user.png') }}"
+                    src="{{ asset('backend/dist/img/avatar.png') }}"
                     class="img-circle school-user-avatar"
                     alt="User"
                 >
@@ -352,4 +351,3 @@
 
     </ul>
 </nav>
-```

@@ -14,11 +14,11 @@
     }
 
     .students-page-header .page-icon {
-        width: 46px;
-        height: 46px;
-        border-radius: 12px;
-        background: #eef2ff;
-        color: #4f46e5;
+        width: 48px;
+        height: 48px;
+        border-radius: 8px;
+        background: #ecfdf5;
+        color: #16a34a;
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -32,7 +32,7 @@
         font-weight: 700;
         color: #1f2937;
         margin-bottom: 0.15rem;
-        letter-spacing: -0.01em;
+        letter-spacing: 0;
     }
 
     .students-page-header .text-muted {
@@ -53,7 +53,7 @@
     }
 
     .students-page-header .breadcrumb-item.active {
-        color: #4f46e5;
+        color: #16a34a;
         font-weight: 600;
     }
 
@@ -69,7 +69,7 @@
     /* ---------- Card ---------- */
     .students-card {
         border: none;
-        border-radius: 16px;
+        border-radius: 8px;
         box-shadow: 0 1px 3px rgba(16, 24, 40, 0.06), 0 8px 24px -12px rgba(16, 24, 40, 0.08);
         overflow: hidden;
     }
@@ -77,7 +77,7 @@
     .students-card .card-header {
         background: #fff;
         border-bottom: 1px solid #eef0f3;
-        padding: 1.15rem 1.5rem;
+        padding: 1rem 1.25rem;
         display: flex;
         align-items: center;
         flex-wrap: wrap;
@@ -85,7 +85,7 @@
     }
 
     .students-card .card-title {
-        font-size: 1.05rem;
+        font-size: 1rem;
         font-weight: 700;
         color: #1f2937;
         display: flex;
@@ -108,30 +108,30 @@
 
     /* ---------- Buttons ---------- */
     .btn-add-student {
-        background: #4f46e5;
+        background: #16a34a;
         border: none;
         color: #fff;
         font-weight: 600;
         font-size: 0.85rem;
-        padding: 0.55rem 1.1rem;
-        border-radius: 10px;
-        box-shadow: 0 2px 6px rgba(79, 70, 229, 0.25);
+        padding: 0.6rem 1.15rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(22, 163, 74, 0.25);
         transition: background 0.15s ease, transform 0.1s ease;
     }
 
     .btn-add-student:hover {
-        background: #4338ca;
+        background: #15803d;
         color: #fff;
         transform: translateY(-1px);
     }
 
     .btn-icon-action {
-        width: 34px;
-        height: 34px;
+        width: 36px;
+        height: 36px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        border-radius: 9px;
+        border-radius: 8px;
         border: 1px solid transparent;
         font-size: 0.8rem;
         transition: all 0.15s ease;
@@ -159,6 +159,12 @@
         color: #b91c1c;
     }
 
+    .btn-add-student:focus-visible,
+    .btn-icon-action:focus-visible {
+        outline: 2px solid #16a34a;
+        outline-offset: 2px;
+    }
+
     /* ---------- Table ---------- */
     .table-responsive-students {
         overflow-x: auto;
@@ -177,17 +183,17 @@
         font-size: 0.72rem;
         font-weight: 700;
         text-transform: uppercase;
-        letter-spacing: 0.04em;
+        letter-spacing: 0;
         border: none;
         border-bottom: 1px solid #eef0f3;
-        padding: 0.85rem 1.1rem;
+        padding: 0.9rem 1rem;
         white-space: nowrap;
     }
 
     table.students-table tbody td {
         border: none;
         border-bottom: 1px solid #f1f2f5;
-        padding: 0.9rem 1.1rem;
+        padding: 0.9rem 1rem;
         vertical-align: middle;
         font-size: 0.875rem;
         color: #374151;
@@ -232,8 +238,8 @@
         width: 38px;
         height: 38px;
         border-radius: 10px;
-        background: linear-gradient(135deg, #eef2ff, #e0e7ff);
-        color: #4f46e5;
+        background: linear-gradient(135deg, #ecfdf5, #dcfce7);
+        color: #16a34a;
         font-weight: 700;
         font-size: 0.9rem;
         display: flex;

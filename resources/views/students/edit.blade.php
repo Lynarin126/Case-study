@@ -17,8 +17,8 @@
         width: 46px;
         height: 46px;
         border-radius: 12px;
-        background: #eef2ff;
-        color: #4f46e5;
+        background: #ecfdf5;
+        color: #16a34a;
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -53,7 +53,7 @@
     }
 
     .students-page-header .breadcrumb-item.active {
-        color: #4f46e5;
+        color: #16a34a;
         font-weight: 600;
     }
 
@@ -109,8 +109,8 @@
     }
 
     .students-card .card-body .form-control:focus {
-        border-color: #4f46e5;
-        box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+        border-color: #16a34a;
+        box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.12);
         outline: none;
     }
 
@@ -135,19 +135,19 @@
     }
 
     .btn-save-student {
-        background: #4f46e5;
+        background: #16a34a;
         border: none;
         color: #fff;
         font-weight: 600;
         font-size: 0.85rem;
         padding: 0.6rem 1.4rem;
         border-radius: 10px;
-        box-shadow: 0 2px 6px rgba(79, 70, 229, 0.25);
+        box-shadow: 0 2px 6px rgba(22, 163, 74, 0.25);
         transition: background 0.15s ease, transform 0.1s ease;
     }
 
     .btn-save-student:hover {
-        background: #4338ca;
+        background: #15803d;
         color: #fff;
         transform: translateY(-1px);
     }
@@ -212,7 +212,7 @@
 <div class="card students-card">
     <div class="card-header">
         <h3 class="card-title mb-0">
-            <i class="fas fa-id-card" style="color:#4f46e5;"></i>
+            <i class="fas fa-id-card" style="color:#16a34a;"></i>
             ព័ត៌មាននិស្សិត
         </h3>
     </div>

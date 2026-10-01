@@ -129,7 +129,7 @@
     <div class="sidebar">
         <div class="user-panel mt-3 pb-3 mb-3 d-flex align-items-center">
             <div class="image">
-                <img src="{{ asset('backend/dist/img/user.png') }}" class="img-circle elevation-2" style="width:40px;height:40px;">
+                <img src="{{ asset('backend/dist/img/avatar.png') }}" class="img-circle elevation-2" style="width:40px;height:40px;">
             </div>
             <div class="info d-flex flex-column">
                 <a href="{{ route('profile.edit') }}" class="d-block text-white mb-1 font-weight-bold">
@@ -153,7 +153,7 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item">
                     <a href="{{ route('dashboard') }}" class="nav-link {{ request()->routeIs('dashboard') ? 'active' : '' }}">
-                        <i class="nav-icon fas fa-home"></i>
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>ផ្ទាំងគ្រប់គ្រង</p>
                     </a>
                 </li>

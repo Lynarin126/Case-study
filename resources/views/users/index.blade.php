@@ -15,9 +15,9 @@
         --up-muted: #94a3b8;
         --up-border: #e9ecf2;
         --up-surface: #ffffff;
-        --up-accent: #4338ca;
-        --up-accent-soft: #eef0ff;
-        --up-accent-2: #7c3aed;
+        --up-accent: #15803d;
+        --up-accent-soft: #ecfdf5;
+        --up-accent-2: #22c55e;
         --up-success: #0f9d63;
         --up-success-soft: #e6f7ef;
     }
@@ -38,7 +38,7 @@
         font-size: 1.2rem;
         margin-right: 0.95rem;
         flex-shrink: 0;
-        box-shadow: 0 8px 20px -6px rgba(67, 56, 202, 0.45);
+        box-shadow: 0 8px 20px -6px rgba(21, 128, 61, 0.45);
     }
 
     .users-page-header h1 {
@@ -147,7 +147,7 @@
         font-size: 0.85rem;
         padding: 0.65rem 1.35rem;
         border-radius: 12px;
-        box-shadow: 0 10px 22px -8px rgba(67, 56, 202, 0.5);
+        box-shadow: 0 10px 22px -8px rgba(21, 128, 61, 0.5);
         transition: transform 0.15s ease, box-shadow 0.15s ease;
         letter-spacing: 0.01em;
     }
@@ -155,7 +155,7 @@
     .btn-add-user:hover {
         color: #fff;
         transform: translateY(-2px);
-        box-shadow: 0 14px 26px -8px rgba(67, 56, 202, 0.55);
+        box-shadow: 0 14px 26px -8px rgba(21, 128, 61, 0.55);
     }
 
     .btn-icon-action {
@@ -171,15 +171,15 @@
     }
 
     .btn-icon-role {
-        background: #eef6ff;
-        color: #1d6fd8;
-        border-color: #cfe5fb;
+        background: #f0fdf4;
+        color: #16a34a;
+        border-color: #dcfce7;
     }
 
     .btn-icon-role:hover {
-        background: #1d6fd8;
+        background: #16a34a;
         color: #fff;
-        border-color: #1d6fd8;
+        border-color: #16a34a;
         transform: translateY(-1px);
     }
 
@@ -252,7 +252,7 @@
     }
 
     table.users-table tbody tr:hover {
-        background: linear-gradient(90deg, #f8f8ff, #fafbff);
+        background: linear-gradient(90deg, #f8fef9, #fafefc);
     }
 
     .row-index {
@@ -279,7 +279,7 @@
         align-items: center;
         justify-content: center;
         flex-shrink: 0;
-        box-shadow: 0 6px 14px -5px rgba(67, 56, 202, 0.45);
+        box-shadow: 0 6px 14px -5px rgba(21, 128, 61, 0.45);
         position: relative;
     }
 
@@ -288,7 +288,7 @@
         position: absolute;
         inset: -3px;
         border-radius: 14px;
-        border: 1.5px solid rgba(67, 56, 202, 0.18);
+        border: 1.5px solid rgba(21, 128, 61, 0.18);
     }
 
     .user-names .khmer-name {

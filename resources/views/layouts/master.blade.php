@@ -7,6 +7,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('title', 'Dashboard | LMS')</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@400;700&family=Moul&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="{{ asset('backend/dist/img/spilogo.png') }}">
     <link rel="stylesheet" href="{{ asset('backend/plugins/fontawesome-free/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('backend/dist/css/adminlte.min.css') }}">
@@ -21,7 +24,8 @@
     <style>
         :root {
             --sidebar-width: 300px;
-            --app-font: "Khmer OS Siemreap", "Khmer OS", Arial, Helvetica, sans-serif;
+            --app-font: "Battambang", "Khmer OS Siemreap", "Khmer OS", sans-serif;
+            --heading-font: "Khmer OS Muol", "Moul", var(--app-font);
             --sidebar-font: 17px;
             --sidebar-sub-font: 15px;
             --sidebar-icon: 17px;
@@ -32,6 +36,26 @@
 
         body {
             font-family: var(--app-font);
+        }
+
+        h1,
+        h2,
+        h3,
+        .h1,
+        .h2,
+        .h3,
+        .main-sidebar .brand-text {
+            font-family: var(--heading-font);
+            line-height: 1.6;
+        }
+
+        button,
+        input,
+        select,
+        textarea,
+        .select2-container,
+        .dataTables_wrapper {
+            font-family: var(--app-font) !important;
         }
 
         .form-control,
@@ -46,15 +70,15 @@
         .form-control:hover,
         .custom-select:hover,
         .select2-container--bootstrap4 .select2-selection:hover {
-            border-color: #80bdff;
+            border-color: #86efac;
         }
 
         .form-control:focus,
         .custom-select:focus,
         .select2-container--bootstrap4.select2-container--focus .select2-selection,
         .select2-container--bootstrap4.select2-container--open .select2-selection {
-            border-color: #80bdff;
-            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+            border-color: #86efac;
+            box-shadow: 0 0 0 0.2rem rgba(22, 163, 74, 0.25);
             outline: 0;
         }
 
@@ -77,7 +101,7 @@
             padding: 10px 16px;
             color: #ffffff;
             text-align: center;
-            background: rgba(0, 123, 255, 0.92);
+            background: rgba(22, 163, 74, 0.92);
             border-radius: 4px;
             box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.18);
             transform: translate(-50%, -50%);

@@ -2,8 +2,107 @@
 
 @section('title', 'ម៉ូឌុល និងមេរៀន | LMS')
 
+@push('styles')
+<style>
+    .course-outline-header {
+        padding-bottom: 1rem;
+    }
+
+    .course-outline-header h1 {
+        font-size: 1.55rem;
+        line-height: 1.6;
+    }
+
+    .course-outline-card {
+        overflow: hidden;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.06) !important;
+    }
+
+    .course-outline-toolbar {
+        gap: 1rem;
+        padding: 1rem 1.25rem;
+        background: #fff;
+        border-bottom: 1px solid #dee2e6;
+    }
+
+    .course-outline-module {
+        overflow: hidden;
+        border: 1px solid #dee2e6;
+        border-radius: 6px;
+    }
+
+    .course-outline-module-header {
+        gap: 1rem;
+        padding: 0.75rem 1rem;
+    }
+
+    .course-outline-module-header h5 {
+        flex: 1;
+        min-width: 0;
+        margin: 0;
+    }
+
+    .course-outline-module-header .btn-link {
+        padding: 0.35rem 0;
+        line-height: 1.6;
+        text-align: left;
+        white-space: normal;
+    }
+
+    .course-outline-module-header > div {
+        flex-shrink: 0;
+    }
+
+    .course-outline-lesson {
+        gap: 0.75rem;
+        padding: 0.9rem 1.1rem;
+    }
+
+    .course-outline-lesson > div:first-child {
+        flex: 0 0 1.5rem;
+        text-align: center;
+    }
+
+    .course-outline-lesson strong {
+        line-height: 1.6;
+    }
+
+    @media (max-width: 575.98px) {
+        .course-outline-toolbar {
+            align-items: flex-start !important;
+        }
+
+        .course-outline-toolbar .btn {
+            width: 100%;
+            margin-left: 0 !important;
+        }
+
+        .course-outline-module-header {
+            align-items: flex-start !important;
+            flex-wrap: wrap;
+        }
+
+        .course-outline-module-header h5,
+        .course-outline-module-header > div,
+        .course-outline-module-header > div .btn {
+            width: 100%;
+        }
+
+        .course-outline-lesson {
+            align-items: flex-start !important;
+        }
+
+        .course-outline-lesson > div:last-child {
+            margin-left: auto;
+        }
+    }
+</style>
+@endpush
+
 @section('content')
-<section class="content-header px-0">
+<section class="content-header px-0 course-outline-header">
     <div class="container-fluid px-0">
         <div class="row mb-2 align-items-center">
             <div class="col-sm-7">
@@ -28,8 +127,8 @@
     </div>
 @endif
 
-<div class="card shadow-sm mb-4">
-    <div class="card-header d-flex align-items-center">
+<div class="card shadow-sm mb-4 course-outline-card">
+    <div class="card-header d-flex align-items-center course-outline-toolbar">
         <h3 class="card-title mb-0">បញ្ជីម៉ូឌុល</h3>
         <button class="btn btn-primary btn-sm ml-auto" data-toggle="modal" data-target="#createModuleModal">
             <i class="fas fa-plus mr-1"></i> បង្កើតម៉ូឌុលថ្មី
@@ -41,8 +140,8 @@
         @else
             <div class="accordion" id="modulesAccordion">
                 @foreach($modules as $module)
-                    <div class="card mb-2">
-                        <div class="card-header d-flex align-items-center justify-content-between" id="heading{{ $module->course_module_id }}" style="background-color: #f8f9fa;">
+                    <div class="card mb-2 course-outline-module">
+                        <div class="card-header d-flex align-items-center justify-content-between course-outline-module-header" id="heading{{ $module->course_module_id }}" style="background-color: #f8f9fa;">
                             <h5 class="mb-0">
                                 <button class="btn btn-link text-dark font-weight-bold" type="button" data-toggle="collapse" data-target="#collapse{{ $module->course_module_id }}" aria-expanded="true" aria-controls="collapse{{ $module->course_module_id }}">
                                     ម៉ូឌុលទី {{ $module->module_number }}: {{ $module->title }}
@@ -62,7 +161,7 @@
                                 @else
                                     <ul class="list-group list-group-flush">
                                         @foreach($module->lessons as $lesson)
-                                            <li class="list-group-item d-flex align-items-center">
+                                            <li class="list-group-item d-flex align-items-center course-outline-lesson">
                                                 <div class="mr-3 text-secondary">
                                                     @if($lesson->content_type == 'video')
                                                         <i class="fas fa-video"></i>
